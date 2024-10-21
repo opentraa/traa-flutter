@@ -1,0 +1,3 @@
+[submodule "thirdparty/traa"]
+	path = thirdparty/traa
+	url = git@github.com:opentraa/traa.git

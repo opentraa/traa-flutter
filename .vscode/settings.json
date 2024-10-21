@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "export.h": "c",
+    "traa.h": "c",
+    "traa_plugin.cc": "c",
+    "traa_plugin.h": "c",
+    "stdio.h": "c"
+  },
+  "dart.flutterSdkPath": ".fvm/versions/3.24.5"
+}

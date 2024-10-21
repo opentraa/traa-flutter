@@ -1,0 +1,26 @@
+# Run with `dart run ffigen --config ffigen.yaml`.
+name: TraaPluginBindings
+description: |
+  Bindings for `thirdparty/traa/include/traa/traa.h`.
+
+  Regenerate bindings with `dart run ffigen --config ffigen.yaml`.
+output: 'lib/traa_plugin_bindings_generated.dart'
+headers:
+  entry-points:
+    - 'thirdparty/traa/include/traa/traa.h'
+  include-directives:
+    - 'thirdparty/traa/include/traa/*.h'
+compiler-opts:
+    # include the traa header files
+    - '-Ithirdparty/traa/include'
+
+    # use this to undef the TRAA_API and TRAA_CALL macros
+    # which will bring compiler warnings when using ffigen.
+    - '-DTRAA_API_UNDEF=1'
+preamble: |
+  // ignore_for_file: always_specify_types
+  // ignore_for_file: camel_case_types
+  // ignore_for_file: non_constant_identifier_names
+comments:
+  style: any
+  length: full
